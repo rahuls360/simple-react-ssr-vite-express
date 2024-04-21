@@ -24,6 +24,7 @@ app.use("*", async (_, res) => {
 		const html = template.replace(`<!--outlet-->`, `${render(data)} ${script}`);
 		res.status(200).set({ "Content-Type": "text/html" }).end(html);
 	} catch (error) {
+		// res.send vs res.end https://stackoverflow.com/a/49242271/6127580 (res.send is better always)
 		res.status(500).send({ error });
 	}
 });
