@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const Products = ({ data }) => {
-	console.log("data", data);
+	// console.log("data", data);
 	return (
 		<section>
 			<h3>Products</h3>
